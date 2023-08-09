@@ -12,5 +12,5 @@ This mod fixes the deadlock by properly disabling chicken jockeys for striders i
 Most of the work for this mod was the investigation, as the bug was extremely rare and difficult to reproduce.
 - tildejustin - investigation, found a heavily related bug report ([MC-199487](https://bugs.mojang.com/browse/MC-199487)) which motivated the investigation
 - Char - investigation, implementation
-- Redlime - fixed my dumb implementation errors (oops), added thread dumper on other server freezes, provided stacktraces for the actual bug
+- RedLime - fixed my dumb implementation errors (oops), added thread dumper on other server freezes, provided stacktraces for the actual bug
 - some others
