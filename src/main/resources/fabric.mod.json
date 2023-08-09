@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "antigone",
+  "version": "${version}",
+  "name": "antigone",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/qwertyuioplkjhgfd/antigone"
+  },
+  "license": "MIT",
+  "environment": "server",
+  "mixins": [
+    "antigone.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
