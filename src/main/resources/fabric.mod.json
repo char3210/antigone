@@ -9,7 +9,7 @@
     "repo": "https://github.com/qwertyuioplkjhgfd/antigone"
   },
   "license": "MIT",
-  "environment": "server",
+  "environment": "*",
   "mixins": [
     "antigone.mixins.json"
   ],
