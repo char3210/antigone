@@ -38,7 +38,7 @@ public abstract class StriderEntityMixin extends AnimalEntity implements ItemSte
                             ")Lnet/minecraft/entity/EntityData;"
             )
     )
-    public EntityData something(MobEntity instance, WorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, CompoundTag entityTag) {
+    public EntityData addZombieData(MobEntity instance, WorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, CompoundTag entityTag) {
         if (instance instanceof ZombifiedPiglinEntity) {
             if (getServer() != null && Thread.currentThread() != getServer().getThread()) {
                 entityData = new ZombieEntity.ZombieData(ZombieEntity.method_29936(this.random), false);
