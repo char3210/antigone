@@ -29,6 +29,7 @@ public abstract class StriderEntityMixin extends AnimalEntity implements ItemSte
             method = "initialize",
             at = @At(
                     value = "INVOKE",
+                    // newly spawned passenger initialization
                     target = "Lnet/minecraft/entity/mob/MobEntity;initialize(" +
                             "Lnet/minecraft/world/WorldAccess;" +
                             "Lnet/minecraft/world/LocalDifficulty;" +
@@ -39,8 +40,10 @@ public abstract class StriderEntityMixin extends AnimalEntity implements ItemSte
             )
     )
     public EntityData addZombieData(MobEntity instance, WorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, CompoundTag entityTag) {
-        if (instance instanceof ZombifiedPiglinEntity) {
+        if (instance instanceof ZombifiedPiglinEntity && entityData == null) {
+            // check if this is happening during chunk generation
             if (getServer() != null && Thread.currentThread() != getServer().getThread()) {
+                // disable chicken jockey for this zombified piglin
                 entityData = new ZombieEntity.ZombieData(ZombieEntity.method_29936(this.random), false);
             }
         }
