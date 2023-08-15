@@ -6,9 +6,6 @@
   "mixins": [
     "StriderEntityMixin"
   ],
-  "client": [
-    "MixinIntegratedServer"
-  ],
   "injectors": {
     "defaultRequire": 1
   }
